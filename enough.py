@@ -24,7 +24,7 @@ while 1:
     Yapımcı: Muhammed
 
 
-    Sms: {}           {}by {}@RivenShadow\n  
+    Başladığında kapatmak için: CTRL + C           {}by {}@RivenShadow\n  
     """.format(Fore.LIGHTCYAN_EX, len(servisler_sms), Style.RESET_ALL, Fore.LIGHTRED_EX))
     try:
         menu = (input(Fore.LIGHTMAGENTA_EX + " 1- SMS Gönder (Normal)\n\n 2- SMS Gönder (Hızlı)\n\n 3- Çıkış\n\n" + Fore.LIGHTYELLOW_EX + " Seçtiğin: "))
@@ -38,7 +38,7 @@ while 1:
         continue
     if menu == 1:
         system("cls||clear")
-        print(Fore.LIGHTYELLOW_EX + "Telefon numarası +90 olmadan yaz ve birleşik yaz..: "+ Fore.LIGHTGREEN_EX, end="")
+        print(Fore.LIGHTYELLOW_EX + "Telefon numarası +90 olmadan yaz ve birleşik yaz: "+ Fore.LIGHTGREEN_EX, end="")
         tel_no = input()
         tel_liste = []
         if tel_no == "":
@@ -70,13 +70,13 @@ while 1:
                 continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "E Mail adresi (Bilmiyorsanız 'enter' tuşuna basınız: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTYELLOW_EX + "EMail adresi (Bilmiyorsanız 'enter' tuşuna basınız: "+ Fore.LIGHTGREEN_EX, end="")
             mail = input()
             if ("@" not in mail or ".com" not in mail) and mail != "":
                 raise
         except:
             system("cls||clear")
-            print(Fore.LIGHTRED_EX + "Hatalı mail adresi. Tekrar deneyiniz..") 
+            print(Fore.LIGHTRED_EX + "Hatalı Email adresi. Tekrar deneyiniz..") 
             sleep(3)
             continue
         system("cls||clear")
@@ -131,7 +131,7 @@ while 1:
         break
     elif menu == 2:
         system("cls||clear")
-        print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında +90 ve birleşik olsun olmadan yazınız: "+ Fore.LIGHTGREEN_EX, end="")
+        print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında +90 ve birleşik olsun: "+ Fore.LIGHTGREEN_EX, end="")
         tel_no = input()
         try:
             int(tel_no)
