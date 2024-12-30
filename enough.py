@@ -24,7 +24,7 @@ while 1:
     Yapımcı: Muhammed
 
 
-    Başladığında kapatmak için: CTRL + C           {}by {}@RivenShadow\n  
+    Başladığında kapatmak için: CTRL + C           {}Yapan {}@RivenShadow\n  
     """.format(Fore.LIGHTCYAN_EX, len(servisler_sms), Style.RESET_ALL, Fore.LIGHTRED_EX))
     try:
         menu = (input(Fore.LIGHTMAGENTA_EX + " 1- SMS Gönder (Normal)\n\n 2- SMS Gönder (Hızlı)\n\n 3- Çıkış\n\n" + Fore.LIGHTYELLOW_EX + " Seçtiğin: "))
@@ -38,7 +38,7 @@ while 1:
         continue
     if menu == 1:
         system("cls||clear")
-        print(Fore.LIGHTYELLOW_EX + "Telefon numarası +90 olmadan yaz ve birleşik yaz: "+ Fore.LIGHTGREEN_EX, end="")
+        print(Fore.LIGHTYELLOW_EX + "Telefon numarası (+90 olmadan yaz ve birleşik yaz): "+ Fore.LIGHTGREEN_EX, end="")
         tel_no = input()
         tel_liste = []
         if tel_no == "":
@@ -62,7 +62,7 @@ while 1:
                 if len(tel_no) != 10:
                     raise ValueError
                 tel_liste.append(tel_no)
-                sonsuz = "(Sonsuz ise 'enter' tuşuna basın..)"  
+                sonsuz = "(Sonsuz ise (enter) tuşuna basın..)"  
             except ValueError:
                 system("cls||clear")
                 print(Fore.LIGHTRED_EX + "Hatalı telefon numarası..") 
@@ -70,7 +70,7 @@ while 1:
                 continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "EMail adresi (Bilmiyorsanız 'enter' tuşuna basınız: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTYELLOW_EX + "EMail adresi Bilmiyorsanız (enter) tuşuna basınız: "+ Fore.LIGHTGREEN_EX, end="")
             mail = input()
             if ("@" not in mail or ".com" not in mail) and mail != "":
                 raise
@@ -94,11 +94,11 @@ while 1:
             continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "Kaç saniye göndermek istiyorsunuz..: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTYELLOW_EX + "Kaç (saniye) göndermek istiyorsunuz..: "+ Fore.LIGHTGREEN_EX, end="")
             aralik = int(input())
         except ValueError:
             system("cls||clear")
-            print(Fore.LIGHTRED_EX + "Hatalı giriş yaptın. Tekrar deneyiniz.") 
+            print(Fore.LIGHTRED_EX + "(Hatalı giriş yaptınız) Tekrar deneyiniz.") 
             sleep(3)
             continue
         system("cls||clear")
@@ -123,7 +123,7 @@ while 1:
                                         break
                                     exec("sms."+attribute+"()")
                                     sleep(aralik)
-        print(Fore.LIGHTRED_EX + "\nMenüye dönmek için 'enter' tuşuna basınız..")
+        print(Fore.LIGHTRED_EX + "\nMenüye dönmek için (enter) tuşuna basınız..")
         input()
     elif menu == 3:
         system("cls||clear")
@@ -131,7 +131,7 @@ while 1:
         break
     elif menu == 2:
         system("cls||clear")
-        print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında +90 ve birleşik olsun: "+ Fore.LIGHTGREEN_EX, end="")
+        print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında (+90 ve birleşik olsun): "+ Fore.LIGHTGREEN_EX, end="")
         tel_no = input()
         try:
             int(tel_no)
@@ -139,18 +139,18 @@ while 1:
                 raise ValueError
         except ValueError:
             system("cls||clear")
-            print(Fore.LIGHTRED_EX + "Hatalı telefon numarası. Tekrar deneyiniz.") 
+            print(Fore.LIGHTRED_EX + "(Hatalı telefon numarası) Tekrar deneyiniz..") 
             sleep(3)
             continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + " EMail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTYELLOW_EX + " EMail adresi Bilmiyorsanız (enter) tuşuna basın: "+ Fore.LIGHTGREEN_EX, end="")
             mail = input()
             if ("@" not in mail or ".com" not in mail) and mail != "":
                 raise
         except:
             system("cls||clear")
-            print(Fore.LIGHTRED_EX + "Hatalı  Email adresi. Tekrar deneyiniz.") 
+            print(Fore.LIGHTRED_EX + "(Hatalı  Email adresi) Tekrar deneyiniz..") 
             sleep(3)
             continue
         system("cls||clear")
@@ -212,5 +212,5 @@ while 1:
                     wait(futures)
         except KeyboardInterrupt:
             system("cls||clear")
-            print("\nCtrl+C tuş kombinasyonu algılandı. Menüye dönülüyor..")
+            print("\nCtrl+C tuş algılandı Menüye dönülüyor..")
             sleep(2)
