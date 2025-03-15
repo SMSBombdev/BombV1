@@ -19,12 +19,12 @@ while 1:
 
     SMSBombV1 hoş geldiniz..
     
-    YouTube: Riven Shadow
+    TikTok: renasbey_.
 
-    Yapımcı: Muhammed
+    Yapımcı: RenasBey
 
 
-    Başladığında kapatmak için: CTRL + C     {}           {}By {}@RivenShadow\n  
+    Başladığında kapatmak için: CTRL + C     {}           {}By {}@renasbey_.\n  
     """.format(Fore.LIGHTCYAN_EX, len(servisler_sms), Style.RESET_ALL, Fore.LIGHTRED_EX))
     try:
         menu = (input(Fore.LIGHTMAGENTA_EX + " 1- SMS Gönder (Normal)\n\n 2- SMS Gönder (Hızlı)\n\n 3- Çıkış\n\n" + Fore.LIGHTYELLOW_EX + " Seçtiğin: "))
